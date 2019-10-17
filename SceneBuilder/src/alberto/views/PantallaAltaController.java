@@ -1,21 +1,33 @@
 package alberto.views;
+
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.AnchorPane;
 
 public class PantallaAltaController {
 
     @FXML
-    private AnchorPane dp_fecha;
+    private TextField textFieldLocal;
+
     @FXML
-    private TextField tv_local;
+    private TextField textFieldPuntuacionL;
+
     @FXML
-    private TextField tv_r1;
+    private TextField textFieldPuntuacionV;
+
     @FXML
-    private TextField tv_r2;
+    private TextField textFieldVisitante;
+
     @FXML
-    private TextField tv_visitante;
+    private ComboBox<?> comboBoxDivision;
+
     @FXML
-    private ComboBox<?> cb_div;
+    private DatePicker datePickerFecha;
+
+    @FXML
+    private Button btnAñadir;
+
 }
+

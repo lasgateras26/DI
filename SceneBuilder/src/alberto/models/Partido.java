@@ -53,11 +53,6 @@ public class Partido implements Serializable {
         return fecha;
     }
 
-    /**
-     * Devuelve la fecha convertida en string para imprimir la propiedad en la tabla
-     *
-     * @return
-     */
     public String getFechaString() {
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         String fechaS = sdf.format(fecha);

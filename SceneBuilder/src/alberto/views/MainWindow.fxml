@@ -24,22 +24,27 @@
          <children>
             <TableView fx:id="tv_partidos" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
               <columns>
-               <TableColumn text="Local">
+               <TableColumn text="Equipo Local">
                    <cellValueFactory>
-                       <PropertyValueFactory property="local" />
+                       <PropertyValueFactory property="equipoLocal" />
                    </cellValueFactory>
                </TableColumn>
-                  <TableColumn text="Visitante">
+                  <TableColumn text="Equipo Visitante">
                       <cellValueFactory>
-                          <PropertyValueFactory property="visitante" />
+                          <PropertyValueFactory property="equipoVisitante" />
                       </cellValueFactory>
                   </TableColumn>
-                  <TableColumn text="Marcadorrr">
+                  <TableColumn text="Puntuacion Local">
                       <cellValueFactory>
-                          <PropertyValueFactory property="marcador" />
+                          <PropertyValueFactory property="puntuacionLocal" />
                       </cellValueFactory>
                   </TableColumn>
-                  <TableColumn text="División">
+                  <TableColumn text="Puntuacion Visitante">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="puntuacionVisitante" />
+                      </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn text="Division">
                       <cellValueFactory>
                           <PropertyValueFactory property="division" />
                       </cellValueFactory>
@@ -49,7 +54,6 @@
                           <PropertyValueFactory property="fecha" />
                       </cellValueFactory>
                   </TableColumn>
-
               </columns>
             </TableView>
          </children>

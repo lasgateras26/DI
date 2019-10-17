@@ -9,27 +9,27 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<TitledPane animated="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" text="untitled" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1">
+<TitledPane animated="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" text="untitled" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
   <content>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
          <children>
-            <Label layoutX="54.0" layoutY="52.0" text="Equipo local" />
-            <TextField layoutX="126.0" layoutY="48.0" prefHeight="21.0" prefWidth="120.0" />
-            <Label layoutX="324.0" layoutY="52.0" text="Equipo visitante" />
-            <TextField layoutX="138.0" layoutY="115.0" prefHeight="14.0" prefWidth="69.0" />
-            <TextField layoutX="275.0" layoutY="115.0" prefHeight="14.0" prefWidth="69.0" />
-            <Label layoutX="59.0" layoutY="119.0" text="Marcador" />
-            <Label layoutX="241.0" layoutY="119.0" text="-" />
-            <TextField layoutX="416.0" layoutY="48.0" prefHeight="21.0" prefWidth="120.0" />
-            <Label layoutX="59.0" layoutY="187.0" text="División" />
-            <Label layoutX="324.0" layoutY="187.0" text="Fecha" />
-            <ComboBox layoutX="111.0" layoutY="184.0" prefWidth="150.0" />
-            <DatePicker layoutX="369.0" layoutY="184.0" />
-            <Button layoutX="273.0" layoutY="307.0" mnemonicParsing="false" text="ACEPTAR">
+            <Label layoutX="54.0" layoutY="52.0" text="Equipo local:" />
+            <TextField fx:id="textFieldLocal" layoutX="126.0" layoutY="48.0" prefHeight="21.0" prefWidth="120.0" />
+            <Label layoutX="324.0" layoutY="52.0" text="Equipo visitante:" />
+            <TextField fx:id="textFieldPuntuacionL" layoutX="159.0" layoutY="115.0" prefHeight="14.0" prefWidth="69.0" />
+            <TextField fx:id="textFieldPuntuacionV" layoutX="442.0" layoutY="115.0" prefHeight="14.0" prefWidth="69.0" />
+            <Label layoutX="59.0" layoutY="119.0" text="Puntuación Local:" />
+            <TextField fx:id="textFieldVisitante" layoutX="416.0" layoutY="48.0" prefHeight="21.0" prefWidth="120.0" />
+            <Label layoutX="59.0" layoutY="187.0" text="División:" />
+            <Label layoutX="324.0" layoutY="187.0" text="Fecha:" />
+            <ComboBox fx:id="comboBoxDivision" layoutX="111.0" layoutY="184.0" prefWidth="150.0" />
+            <DatePicker fx:id="datePickerFecha" layoutX="369.0" layoutY="184.0" />
+            <Button fx:id="btnAñadir" layoutX="273.0" layoutY="307.0" mnemonicParsing="false" text="Añadir">
                <font>
                   <Font size="13.0" />
                </font>
             </Button>
+            <Label layoutX="324.0" layoutY="119.0" text="Puntuación Visitante:" />
          </children></AnchorPane>
   </content>
 </TitledPane>

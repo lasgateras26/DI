@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="94bf97d7-e359-4788-8e9f-6b940d033f61" name="Default Changelist" comment="" />
+    <list default="true" id="94bf97d7-e359-4788-8e9f-6b940d033f61" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SceneBuilder/alberto/views/MainWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SceneBuilder/alberto/views/MainWindow.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SceneBuilder/alberto/views/PantallaAlta.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SceneBuilder/alberto/views/PantallaAlta.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/alberto/models/Partido.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/alberto/models/Partido.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/alberto/views/MainWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/alberto/views/MainWindow.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/alberto/views/MainWindowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/alberto/views/MainWindowController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/alberto/views/PantallaAlta.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/alberto/views/PantallaAlta.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/alberto/views/PantallaAltaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/alberto/views/PantallaAltaController.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +29,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1SIK38WRLgCxJRNz75oCG6ZN3X2" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -82,6 +92,29 @@
       <option name="presentableId" value="Default" />
       <updated>1571245467240</updated>
     </task>
+    <task id="LOCAL-00001" summary="primer commit">
+      <created>1571324632859</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1571324632859</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="primer commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="primer commit" />
   </component>
 </project>
