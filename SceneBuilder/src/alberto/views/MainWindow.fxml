@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="alberto.views.MainWindowController">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu fx:id="menu_alta" mnemonicParsing="false" onAction="#altaPartido" text="Partidos">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Alta..." />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <AnchorPane prefHeight="377.0" prefWidth="600.0">
+         <children>
+            <TableView fx:id="tv_partidos" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+              <columns>
+               <TableColumn text="Local">
+                   <cellValueFactory>
+                       <PropertyValueFactory property="local" />
+                   </cellValueFactory>
+               </TableColumn>
+                  <TableColumn text="Visitante">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="visitante" />
+                      </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn text="Marcadorrr">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="marcador" />
+                      </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn text="División">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="division" />
+                      </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn text="Fecha">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="fecha" />
+                      </cellValueFactory>
+                  </TableColumn>
+
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
