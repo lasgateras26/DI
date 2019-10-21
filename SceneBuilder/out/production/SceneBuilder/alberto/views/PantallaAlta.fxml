@@ -22,7 +22,7 @@
             <TextField fx:id="textFieldVisitante" layoutX="416.0" layoutY="48.0" prefHeight="21.0" prefWidth="120.0" />
             <Label layoutX="59.0" layoutY="187.0" text="División:" />
             <Label layoutX="324.0" layoutY="187.0" text="Fecha:" />
-            <ComboBox fx:id="comboBoxDivision" layoutX="111.0" layoutY="184.0" prefWidth="150.0" />
+            <ComboBox fx:id="comboBoxDivision" layoutX="111.0" layoutY="184.0" prefWidth="150.0"/>
             <DatePicker fx:id="datePickerFecha" layoutX="369.0" layoutY="184.0" />
             <Button fx:id="btnAlta" layoutX="273.0" layoutY="307.0" mnemonicParsing="false" onAction="#altaPartido" text="Alta...">
                <font>

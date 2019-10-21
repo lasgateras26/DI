@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94bf97d7-e359-4788-8e9f-6b940d033f61" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/javafx_swt.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/alberto/logic/Utils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SceneBuilder.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SceneBuilder.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SceneBuilder/alberto/views/MainWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SceneBuilder/alberto/views/MainWindow.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SceneBuilder/alberto/views/PantallaAlta.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SceneBuilder/alberto/views/PantallaAlta.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/alberto/views/MainWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/alberto/views/MainWindow.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/alberto/views/MainWindowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/alberto/views/MainWindowController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/alberto/views/PantallaAlta.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/alberto/views/PantallaAlta.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/alberto/views/PantallaAltaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/alberto/views/PantallaAltaController.java" afterDir="false" />
     </list>
