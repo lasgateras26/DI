@@ -12,14 +12,13 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-
 import java.time.LocalDate;
 import java.util.Date;
 
 public class PantallaAltaController {
 
     private Partido partidoModificar;
-    private int indice;
+    private int indiceModificar;
 
     @FXML
     private TextField textFieldLocal;
@@ -44,22 +43,40 @@ public class PantallaAltaController {
 
     @FXML
     void altaPartido(ActionEvent event) {
-
         LocalDate localDate = datePickerFecha.getValue();
         Date fecha = Utils.convertirToDate(localDate);
+        if (partidoModificar!=null)
+        {
+            partidoModificar.setEquipoLocal(textFieldLocal.getText());
+            partidoModificar.setEquipoVisitante(textFieldVisitante.getText());
+            partidoModificar.setPuntuacionLocal(Integer.parseInt(textFieldPuntuacionL.getText()));
+            partidoModificar.setPuntuacionVisitante(Integer.parseInt(textFieldPuntuacionV.getText()));
+            partidoModificar.setDivision((Division)comboBoxDivision.getSelectionModel().getSelectedItem());
+            partidoModificar.setFecha(fecha);
+            Logica.getInstance().modificarPartido(partidoModificar,indiceModificar);
+        }
+        else {
+            Partido partido = new Partido(textFieldLocal.getText(), textFieldVisitante.getText(), Integer.parseInt(textFieldPuntuacionL.getText()),
+                    Integer.parseInt(textFieldPuntuacionV.getText()), (Division) comboBoxDivision.getSelectionModel().getSelectedItem(), fecha);
+            Logica.getInstance().addPartido(partido);
+        }
 
-        Partido partido = new Partido(textFieldLocal.getText(), textFieldVisitante.getText(), Integer.parseInt(textFieldPuntuacionL.getText()),
-                Integer.parseInt(textFieldPuntuacionV.getText()), (Division) comboBoxDivision.getSelectionModel().getSelectedItem(), fecha);
-        Logica.getInstance().addPartido(partido);
-
-        // Como obtener un stage desde un evento
+        //Como obtener un Stage desde un evento
         Stage stage = ((Stage)((Node)event.getSource()).getScene().getWindow());
         stage.close();
     }
 
-    // todo terminar
-    public void setPartidoModificar(Partido partido){
-        textFieldLocal.setText(partido.getEquipoLocal());
+
+    public void setPartidoModificar(Partido partido, int indice){
+        this.partidoModificar = partido;
+        this.indiceModificar = indice;
+        textFieldLocal.setText(partidoModificar.getEquipoLocal());
+        textFieldVisitante.setText(partidoModificar.getEquipoVisitante());
+        textFieldPuntuacionL.setText(String.valueOf(partidoModificar.getPuntuacionLocal()));
+        textFieldPuntuacionV.setText(String.valueOf(partidoModificar.getPuntuacionVisitante()));
+        //comboBoxDivision.getSelectionModel().select(partidoModificar.getDivision());
+        LocalDate localDate = Utils.convertirToLocalDate(partido.getFecha());
+        datePickerFecha.setValue(localDate);
     }
 }
 
