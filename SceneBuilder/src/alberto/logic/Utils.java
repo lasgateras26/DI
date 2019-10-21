@@ -9,7 +9,7 @@ public class Utils {
         return Date.from(localDate.atStartOfDay(ZoneId.systemDefault()).toInstant());
     }
 
-    public static LocalDate convertirToLocalDate(Date date){
+    public static LocalDate convertirToLocalDate(Date date) {
         return date.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
     }
 }

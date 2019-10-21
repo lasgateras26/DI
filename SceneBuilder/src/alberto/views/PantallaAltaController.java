@@ -13,6 +13,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+
 import java.net.URL;
 import java.time.LocalDate;
 import java.util.Date;
@@ -48,27 +49,24 @@ public class PantallaAltaController implements Initializable {
     void altaPartido(ActionEvent event) {
         LocalDate localDate = datePickerFecha.getValue();
         Date fecha = Utils.convertirToDate(localDate);
-        if (partidoModificar!=null)
-        {
+        if (partidoModificar != null) {
             partidoModificar.setEquipoLocal(textFieldLocal.getText());
             partidoModificar.setEquipoVisitante(textFieldVisitante.getText());
             partidoModificar.setPuntuacionLocal(Integer.parseInt(textFieldPuntuacionL.getText()));
             partidoModificar.setPuntuacionVisitante(Integer.parseInt(textFieldPuntuacionV.getText()));
-            partidoModificar.setDivision((Division)comboBoxDivision.getSelectionModel().getSelectedItem());
+            partidoModificar.setDivision((Division) comboBoxDivision.getSelectionModel().getSelectedItem());
             partidoModificar.setFecha(fecha);
-            Logica.getInstance().modificarPartido(partidoModificar,indiceModificar);
-        }
-        else {
+            Logica.getInstance().modificarPartido(partidoModificar, indiceModificar);
+        } else {
             Partido partido = new Partido(textFieldLocal.getText(), textFieldVisitante.getText(), Integer.parseInt(textFieldPuntuacionL.getText()),
                     Integer.parseInt(textFieldPuntuacionV.getText()), (Division) comboBoxDivision.getSelectionModel().getSelectedItem(), fecha);
             Logica.getInstance().addPartido(partido);
         }
 
         //Como obtener un Stage desde un evento
-        Stage stage = ((Stage)((Node)event.getSource()).getScene().getWindow());
+        Stage stage = ((Stage) ((Node) event.getSource()).getScene().getWindow());
         stage.close();
     }
-
 
     public void setPartidoModificar(Partido partido, int indice) {
         this.partidoModificar = partido;
@@ -84,9 +82,6 @@ public class PantallaAltaController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        comboBoxDivision.getItems().add(Division.Primera);
-        comboBoxDivision.getItems().add(Division.Segunda);
-        comboBoxDivision.getItems().add(Division.Tercera);
+        comboBoxDivision.getItems().addAll(Division.values());
     }
 }
-

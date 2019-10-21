@@ -2,8 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94bf97d7-e359-4788-8e9f-6b940d033f61" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/alberto/views/filters/FilterDivision.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SceneBuilder/alberto/views/MainWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SceneBuilder/alberto/views/MainWindow.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SceneBuilder/alberto/views/PantallaAlta.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SceneBuilder/alberto/views/PantallaAlta.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/alberto/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/alberto/Launcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/alberto/logic/Logica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/alberto/logic/Logica.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/alberto/logic/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/alberto/logic/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/alberto/views/MainWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/alberto/views/MainWindow.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/alberto/views/MainWindowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/alberto/views/MainWindowController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/alberto/views/PantallaAlta.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/alberto/views/PantallaAlta.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/alberto/views/PantallaAltaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/alberto/views/PantallaAltaController.java" afterDir="false" />
     </list>
@@ -32,6 +39,7 @@
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.JavaFX" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -103,7 +111,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571326132045</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="comboBox correcto">
+      <created>1571664932062</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1571664932062</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -122,6 +137,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="primer commit" />
     <MESSAGE value="pantallas vinculadas" />
-    <option name="LAST_COMMIT_MESSAGE" value="pantallas vinculadas" />
+    <MESSAGE value="comboBox correcto" />
+    <option name="LAST_COMMIT_MESSAGE" value="comboBox correcto" />
   </component>
 </project>
