@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import alberto.models.Division?>
+<?import javafx.collections.FXCollections?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.control.cell.*?>
 <?import javafx.scene.layout.*?>
@@ -55,6 +57,15 @@
                 </TableView>
                 <Button id="buttonModificar" layoutX="26.0" layoutY="337.0" mnemonicParsing="false"
                         onAction="#modificarPartido" text="Modificar"/>
+                <ComboBox fx:id="comboBoxFiltrado" layoutX="347.0" layoutY="50.0" prefHeight="63.0" prefWidth="213.0">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <Division fx:id="primera" fx:value="Primera"/>
+                            <Division fx:id="segunda" fx:value="Segunda"/>
+                            <Division fx:id="tercera" fx:value="Tercera"/>
+                        </FXCollections>
+                    </items>
+                </ComboBox>
             </children>
         </AnchorPane>
     </children>

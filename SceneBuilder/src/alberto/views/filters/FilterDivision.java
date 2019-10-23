@@ -10,12 +10,22 @@ public class FilterDivision {
     private ObservableList<Partido> listaPartidos;
     private ObservableList<Partido> listaFiltrada;
 
-    public FilterDivision(ObservableList<Partido> listaPartidos){
+    public FilterDivision(ObservableList<Partido> listaPartidos) {
         this.listaPartidos = listaPartidos;
         listaFiltrada = FXCollections.observableArrayList();
     }
 
-    public void filtar(Division divisionFiltrar){
-
+    public ObservableList<Partido> filtar(Division divisionFiltrar) {
+        if (divisionFiltrar.equals(Division.Primera) && divisionFiltrar != null) {
+            listaFiltrada.clear();
+            for (Partido partido : listaPartidos) {
+                if (partido.getDivision().equals(divisionFiltrar)) {
+                    listaFiltrada.add(partido);
+                }
+            }
+            return listaFiltrada;
+        }
+        return listaPartidos;
     }
 }
+

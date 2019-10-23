@@ -22,7 +22,6 @@ import java.util.ResourceBundle;
 public class PantallaAltaController implements Initializable {
 
     private Partido partidoModificar;
-    private int indiceModificar;
 
     @FXML
     private TextField textFieldLocal;
@@ -56,7 +55,7 @@ public class PantallaAltaController implements Initializable {
             partidoModificar.setPuntuacionVisitante(Integer.parseInt(textFieldPuntuacionV.getText()));
             partidoModificar.setDivision((Division) comboBoxDivision.getSelectionModel().getSelectedItem());
             partidoModificar.setFecha(fecha);
-            Logica.getInstance().modificarPartido(partidoModificar, indiceModificar);
+            Logica.getInstance().modificarPartido(partidoModificar);
         } else {
             Partido partido = new Partido(textFieldLocal.getText(), textFieldVisitante.getText(), Integer.parseInt(textFieldPuntuacionL.getText()),
                     Integer.parseInt(textFieldPuntuacionV.getText()), (Division) comboBoxDivision.getSelectionModel().getSelectedItem(), fecha);
@@ -68,9 +67,8 @@ public class PantallaAltaController implements Initializable {
         stage.close();
     }
 
-    public void setPartidoModificar(Partido partido, int indice) {
+    public void setPartidoModificar(Partido partido) {
         this.partidoModificar = partido;
-        this.indiceModificar = indice;
         textFieldLocal.setText(partidoModificar.getEquipoLocal());
         textFieldVisitante.setText(partidoModificar.getEquipoVisitante());
         textFieldPuntuacionL.setText(String.valueOf(partidoModificar.getPuntuacionLocal()));

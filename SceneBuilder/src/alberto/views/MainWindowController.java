@@ -3,6 +3,7 @@ package alberto.views;
 import alberto.logic.Logica;
 import alberto.models.Division;
 import alberto.models.Partido;
+import alberto.views.filters.FilterDivision;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -21,6 +22,8 @@ import java.util.ResourceBundle;
 
 public class MainWindowController implements Initializable {
 
+    private FilterDivision filterDivision;
+
     @FXML
     private Menu menu_alta;
     @FXML
@@ -37,7 +40,7 @@ public class MainWindowController implements Initializable {
             Stage stage = new Stage();
             stage.initModality(Modality.APPLICATION_MODAL);
             stage.setScene(new Scene(root, 700, 400));
-            stage.show();
+            stage.showAndWait();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -50,14 +53,18 @@ public class MainWindowController implements Initializable {
             Parent root = fxmlLoader.load();
             PantallaAltaController controller = fxmlLoader.getController();
             Partido partido = tv_partidos.getSelectionModel().getSelectedItem();
-            controller.setPartidoModificar(partido, tv_partidos.getSelectionModel().getFocusedIndex());
+            controller.setPartidoModificar(partido);
             Stage stage = new Stage();
             stage.initModality(Modality.APPLICATION_MODAL);
             stage.setScene(new Scene(root, 700, 400));
-            stage.show();
+            stage.showAndWait();
         } catch (IOException e) {
 
         }
+    }
+
+    private void filtrar(){
+        tv_partidos.setItems(filterDivision.filtar(comboBoxFiltrado.getSelectionModel().getSelectedItem()));
     }
 
     public void initialize(URL url, ResourceBundle resourceBundle) {

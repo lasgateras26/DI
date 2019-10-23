@@ -36,8 +36,13 @@ public class Logica {
         return listaPartidos;
     }
 
-    public void modificarPartido(Partido partido, int posicion) {
+    public void modificarPartido(Partido partido) {
+        int posicion = listaPartidos.indexOf(partido);
         listaPartidos.set(posicion, partido);
+    }
+
+    public void borrarPartido(Partido partido) {
+        listaPartidos.remove(partido);
     }
 
     public void guardarFichero() {
