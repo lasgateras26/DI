@@ -23,6 +23,8 @@ public class MainWindowController implements Initializable {
 
     private FilterDivision filterDivision;
 
+    private Partido partidoAmodificar;
+
     @FXML
     private Menu menu_alta;
     @FXML
@@ -53,7 +55,6 @@ public class MainWindowController implements Initializable {
             PantallaAltaController controller = fxmlLoader.getController();
             Partido partido = tv_partidos.getSelectionModel().getSelectedItem();
             controller.setPartidoModificar(partido);
-
             Stage stage = new Stage();
             stage.initModality(Modality.APPLICATION_MODAL);
             stage.setScene(new Scene(root, 700, 400));
