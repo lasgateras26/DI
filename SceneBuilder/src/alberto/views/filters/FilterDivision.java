@@ -16,16 +16,17 @@ public class FilterDivision {
     }
 
     public ObservableList<Partido> filtar(Division divisionFiltrar) {
-        if (divisionFiltrar.equals(Division.Primera) && divisionFiltrar != null) {
+        if(divisionFiltrar != null){
             listaFiltrada.clear();
-            for (Partido partido : listaPartidos) {
-                if (partido.getDivision().equals(divisionFiltrar)) {
+            for (Partido partido : listaPartidos){
+                if(partido.getDivision().equals(divisionFiltrar))
                     listaFiltrada.add(partido);
-                }
             }
             return listaFiltrada;
         }
-        return listaPartidos;
+        else{
+            return listaPartidos;
+        }
     }
 }
 

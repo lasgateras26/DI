@@ -56,8 +56,12 @@
                     </columns>
                 </TableView>
                 <Button id="buttonModificar" layoutX="26.0" layoutY="337.0" mnemonicParsing="false"
-                        onAction="#modificarPartido" text="Modificar"/>
-                <ComboBox fx:id="comboBoxFiltrado" layoutX="347.0" layoutY="50.0" prefHeight="63.0" prefWidth="213.0">
+                        onAction="#modificarPartido" text="Modificar" AnchorPane.bottomAnchor="10.0"
+                        AnchorPane.leftAnchor="20.0"/>
+                <Button fx:id="buttonBorrar" layoutX="109.0" layoutY="337.0" mnemonicParsing="false"
+                        onAction="#borrarPartido" text="Borrar" AnchorPane.bottomAnchor="10.0"
+                        AnchorPane.leftAnchor="100.0"/>
+                <ComboBox fx:id="comboBoxFiltrado" layoutX="161.0" layoutY="341.0" prefWidth="150.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="170.0">
                     <items>
                         <FXCollections fx:factory="observableArrayList">
                             <Division fx:id="primera" fx:value="Primera"/>
