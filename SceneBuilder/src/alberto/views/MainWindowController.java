@@ -16,7 +16,6 @@ import javafx.scene.control.*;
 import javafx.stage.FileChooser;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
@@ -125,7 +124,7 @@ public class MainWindowController implements Initializable {
 
         File file = fileChooser.showOpenDialog(stage);
         if(file != null){
-            Logica.getInstance().cargarFichero();
+            Logica.getInstance().cargarFichero(file);
         }
     }
 
@@ -139,6 +138,6 @@ public class MainWindowController implements Initializable {
 
         File file = fileChooser.showSaveDialog(stage);
         if(file != null)
-            Logica.getInstance().guardarFichero();
+            Logica.getInstance().guardarFichero(file);
     }
 }

@@ -43,11 +43,11 @@ public class Logica {
         listaPartidos.remove(partido);
     }
 
-    public void guardarFichero() {
+    public void guardarFichero(File fichero) {
         ArrayList<Partido> listaPartidos = new ArrayList<Partido>(Logica.getInstance().getListaPartidos());
         ObjectOutputStream ficheroSalida = null;
         try {
-            ficheroSalida = new ObjectOutputStream(new FileOutputStream("partidos.dat"));
+            ficheroSalida = new ObjectOutputStream(new FileOutputStream(fichero));
             ficheroSalida.writeObject(listaPartidos);
         } catch (FileNotFoundException e) {
             System.out.println("El fichero no existe");
@@ -63,11 +63,11 @@ public class Logica {
         }
     }
 
-    public void cargarFichero() {
+    public void cargarFichero(File fichero) {
         ArrayList<Partido> partidosFichero = new ArrayList<Partido>(Logica.getInstance().getListaPartidos());
         ObjectInputStream ficheroEntrada = null;
         try {
-            ficheroEntrada = new ObjectInputStream(new FileInputStream("partidos.dat"));
+            ficheroEntrada = new ObjectInputStream(new FileInputStream(fichero));
             partidosFichero = (ArrayList<Partido>)ficheroEntrada.readObject();
         }
         catch (EOFException e){

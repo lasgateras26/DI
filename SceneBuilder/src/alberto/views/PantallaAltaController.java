@@ -4,6 +4,8 @@ import alberto.logic.Logica;
 import alberto.logic.Utils;
 import alberto.models.Division;
 import alberto.models.Partido;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -13,6 +15,9 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import org.controlsfx.validation.ValidationSupport;
+import org.controlsfx.validation.Validator;
+
 import java.net.URL;
 import java.time.LocalDate;
 import java.util.Date;
@@ -80,5 +85,23 @@ public class PantallaAltaController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         comboBoxDivision.getItems().addAll(Division.values());
+        ValidationSupport validationSupport = new ValidationSupport();
+        validationSupport.registerValidator(textFieldLocal, Validator.createEmptyValidator("El equipo local no puede estar vacío"));
+        validationSupport.registerValidator(textFieldVisitante, Validator.createEmptyValidator("El equipo visitante no puede estar vacío"));
+        validationSupport.registerValidator(textFieldPuntuacionL, Validator.createEmptyValidator("La puntuación del equipo local no puede estar vacía"));
+        validationSupport.registerValidator(textFieldPuntuacionV, Validator.createEmptyValidator("La puntuación del equipo visitante no puede estar vacía"));
+        validationSupport.registerValidator(datePickerFecha, Validator.createEmptyValidator("La fecha no puede estar vacía"));
+        validationSupport.registerValidator(comboBoxDivision, Validator.createEmptyValidator("Se debe seleccionar una división"));
+
+
+        validationSupport.invalidProperty().addListener(new ChangeListener<Boolean>() {
+            @Override
+            public void changed(ObservableValue<? extends Boolean> observableValue, Boolean oldValue, Boolean newValue) {
+                btnAñadir.setDisable(newValue);
+            }
+        });
+
+
+        //btnAñadir.disableProperty().bind(validationSupport.invalidProperty());
     }
 }
