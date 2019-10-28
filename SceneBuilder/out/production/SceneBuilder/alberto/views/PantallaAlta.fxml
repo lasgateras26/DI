@@ -1,35 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
-<TitledPane animated="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
-            prefHeight="400.0" prefWidth="600.0" text="untitled" xmlns="http://javafx.com/javafx/11.0.1"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="alberto.views.PantallaAltaController">
+
+<TitledPane animated="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" text="untitled" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="alberto.views.PantallaAltaController">
     <content>
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
             <children>
-                <Label layoutX="54.0" layoutY="52.0" text="Equipo local:"/>
-                <TextField fx:id="textFieldLocal" layoutX="126.0" layoutY="48.0" prefHeight="21.0" prefWidth="120.0"/>
-                <Label layoutX="324.0" layoutY="52.0" text="Equipo visitante:"/>
-                <TextField fx:id="textFieldPuntuacionL" layoutX="159.0" layoutY="115.0" prefHeight="14.0"
-                           prefWidth="69.0"/>
-                <TextField fx:id="textFieldPuntuacionV" layoutX="442.0" layoutY="115.0" prefHeight="14.0"
-                           prefWidth="69.0"/>
-                <Label layoutX="59.0" layoutY="119.0" text="Puntuación Local:"/>
-                <TextField fx:id="textFieldVisitante" layoutX="416.0" layoutY="48.0" prefHeight="21.0"
-                           prefWidth="120.0"/>
-                <Label layoutX="59.0" layoutY="187.0" text="División:"/>
-                <Label layoutX="324.0" layoutY="187.0" text="Fecha:"/>
-                <ComboBox fx:id="comboBoxDivision" layoutX="111.0" layoutY="184.0" prefWidth="150.0"/>
-                <DatePicker fx:id="datePickerFecha" layoutX="369.0" layoutY="184.0"/>
-                <Button fx:id="btnAlta" layoutX="273.0" layoutY="307.0" mnemonicParsing="false" onAction="#altaPartido"
-                        text="Alta...">
+                <Label layoutX="25.0" layoutY="31.0" text="Equipo local:" AnchorPane.leftAnchor="10.0" />
+                <TextField fx:id="textFieldLocal" layoutX="99.0" layoutY="27.0" prefHeight="21.0" prefWidth="120.0" />
+                <Label layoutX="307.0" layoutY="31.0" text="Equipo visitante:" AnchorPane.leftAnchor="300.0" />
+                <TextField fx:id="textFieldPuntuacionL" layoutX="125.0" layoutY="75.0" prefHeight="14.0" prefWidth="69.0" />
+                <TextField fx:id="textFieldPuntuacionV" layoutX="422.0" layoutY="67.0" prefHeight="14.0" prefWidth="69.0" AnchorPane.leftAnchor="420.0" />
+                <Label layoutX="25.0" layoutY="79.0" text="Puntuación Local:" AnchorPane.leftAnchor="10.0" />
+                <TextField fx:id="textFieldVisitante" layoutX="405.0" layoutY="27.0" prefHeight="21.0" prefWidth="120.0" AnchorPane.leftAnchor="400.0" />
+                <Label layoutX="25.0" layoutY="137.0" text="División:" AnchorPane.leftAnchor="10.0" />
+                <Label layoutX="298.0" layoutY="137.0" text="Fecha:" AnchorPane.leftAnchor="300.0" />
+                <ComboBox fx:id="comboBoxDivision" layoutX="78.0" layoutY="133.0" prefWidth="150.0" />
+                <DatePicker fx:id="datePickerFecha" layoutX="342.0" layoutY="133.0" AnchorPane.leftAnchor="340.0" />
+                <Button fx:id="btnAlta" layoutX="404.0" layoutY="252.0" mnemonicParsing="false" onAction="#altaPartido" text="Alta..." AnchorPane.leftAnchor="404.0">
                     <font>
-                        <Font size="13.0"/>
+                        <Font size="13.0" />
                     </font>
                 </Button>
-                <Label layoutX="324.0" layoutY="119.0" text="Puntuación Visitante:"/>
+                <Label layoutX="302.0" layoutY="71.0" text="Puntuación Visitante:" AnchorPane.leftAnchor="300.0" />
+            <ImageView id="imageView" fitHeight="160.0" fitWidth="305.0" layoutX="29.6" layoutY="196.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0">
+               <image>
+                  <Image url="@res/rugby.jpg" />
+               </image>
+            </ImageView>
             </children>
         </AnchorPane>
     </content>

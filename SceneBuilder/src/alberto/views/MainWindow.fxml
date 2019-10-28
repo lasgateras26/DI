@@ -61,6 +61,12 @@
                 <Button fx:id="buttonBorrar" layoutX="109.0" layoutY="337.0" mnemonicParsing="false"
                         onAction="#borrarPartido" text="Borrar" AnchorPane.bottomAnchor="10.0"
                         AnchorPane.leftAnchor="100.0"/>
+                <Button id="buttonCargar" layoutX="26.0" layoutY="337.0" mnemonicParsing="false"
+                        onAction="#cargarPartido" text="Cargar" AnchorPane.bottomAnchor="10.0"
+                        AnchorPane.leftAnchor="350.0"/>
+                <Button id="buttonGuardar" layoutX="26.0" layoutY="337.0" mnemonicParsing="false"
+                        onAction="#guardarPartido" text="Guardar" AnchorPane.bottomAnchor="10.0"
+                        AnchorPane.leftAnchor="420.0"/>
                 <ComboBox fx:id="comboBoxFiltrado" layoutX="161.0" layoutY="341.0" prefWidth="150.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="170.0">
                     <items>
                         <FXCollections fx:factory="observableArrayList">

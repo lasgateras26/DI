@@ -13,8 +13,11 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.stage.FileChooser;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -32,6 +35,12 @@ public class MainWindowController implements Initializable {
 
     @FXML
     private ComboBox<Division> comboBoxFiltrado;
+
+    @FXML
+    private Button buttonCargar;
+
+    @FXML
+    private Button buttonGuardar;
 
     @FXML
     void añadirPartido(ActionEvent event) {
@@ -104,5 +113,32 @@ public class MainWindowController implements Initializable {
                 tv_partidos.setItems(filterDivision.filtar(t1));
             }
         });
+    }
+
+    @FXML
+    void cargarPartido(ActionEvent actionEvent) {
+        Stage stage = new Stage();
+        stage.setTitle("Cargar Fichero");
+        FileChooser fileChooser = new FileChooser();
+        FileChooser.ExtensionFilter filtro = new FileChooser.ExtensionFilter("Archivos .dat (*.dat)", "*.dat");
+        fileChooser.getExtensionFilters().add(filtro);
+
+        File file = fileChooser.showOpenDialog(stage);
+        if(file != null){
+            Logica.getInstance().cargarFichero();
+        }
+    }
+
+    @FXML
+    void guardarPartido(ActionEvent actionEvent) {
+        Stage stage = new Stage();
+        stage.setTitle("Guardar Fichero");
+        FileChooser fileChooser = new FileChooser();
+        FileChooser.ExtensionFilter filtro = new FileChooser.ExtensionFilter("Archivos .dat (*.dat)", "*.dat");
+        fileChooser.getExtensionFilters().add(filtro);
+
+        File file = fileChooser.showSaveDialog(stage);
+        if(file != null)
+            Logica.getInstance().guardarFichero();
     }
 }

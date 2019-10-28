@@ -3,10 +3,8 @@ package alberto.logic;
 import alberto.models.Partido;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectOutputStream;
+
+import java.io.*;
 import java.util.ArrayList;
 
 public class Logica {
@@ -66,25 +64,34 @@ public class Logica {
     }
 
     public void cargarFichero() {
-        ArrayList<Partido> listaEntrada = new ArrayList<Partido>();
-        for (int i = 0; i < listaPartidos.size(); i++) {
-            listaEntrada.add(listaPartidos.get(i));
-        }
-        ObjectOutputStream ficheroEntrada = null;
+        ArrayList<Partido> partidosFichero = new ArrayList<Partido>(Logica.getInstance().getListaPartidos());
+        ObjectInputStream ficheroEntrada = null;
         try {
-            ficheroEntrada = new ObjectOutputStream((new FileOutputStream("partidos.dat")));
-            ficheroEntrada.writeObject(listaEntrada);
-        } catch (FileNotFoundException e) {
-            System.out.println("Fichero no encontrado");
-        } catch (IOException e) {
-            System.out.println("Error al escribir el fichero");
-        } finally {
+            ficheroEntrada = new ObjectInputStream(new FileInputStream("partidos.dat"));
+            partidosFichero = (ArrayList<Partido>)ficheroEntrada.readObject();
+        }
+        catch (EOFException e){
+            e.printStackTrace();
+        }
+        catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+        catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }finally {
             try {
                 if (ficheroEntrada != null)
                     ficheroEntrada.close();
-            } catch (IOException e) {
-                System.out.println("Error al cerrar el fichero");
             }
+            catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        for(int i = 0; i< listaPartidos.size(); i++){
+            listaPartidos.add(partidosFichero.get(i));
         }
     }
 }
